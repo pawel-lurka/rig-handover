@@ -1,5 +1,11 @@
 # Integration proof
 
-Coordinator-owned integration worktree: `/Users/pawellurka/MEGADev/s01e04/repo/.limen/integration/morning-digest`, branch `integration/morning-digest`. It combines the completed page, JSON, and route-test candidates without changing main. The board candidate joins only after its job finishes. Remove this worktree after all four section 2 features are terminal and none of their jobs runs.
+Coordinator-owned integration worktree: `/Users/pawellurka/MEGADev/s01e04/repo/.limen/integration/morning-digest`, branch `integration/morning-digest`. It combines all four completed section 2 candidates without changing main. Remove this worktree after all four section 2 features are terminal and none of their jobs runs.
 
 The page and JSON branches both added the same reader import to `src/app.tsx`. The integration removes that duplicate and leaves both route implementations unchanged. Route assertions remain unskipped and unchanged; dependency failures are settled by running them against the real combined routes, not by weakening the tests.
+
+At code commit `c11dfbc48fd63d30fa78a2ccda79af1840528cae`, `pnpm test` passed all 40 tests and `pnpm typecheck` exited 0. The in-memory fixture probe follows both board links and proves destination status 200, HTML/JSON job membership and order, correct event counts, original offsets, one inline stylesheet, and no client scripts. The 2026-10-28 and 2026-10-27 pages contain five and four jobs respectively. Missing, empty, malformed, and invalid-night behavior passes in the unchanged route tests.
+
+These checks resolve every open dependency check left by the page, JSON, board, and route-test workers. No mock or skip conceals the missing-route failures observed in their isolated branches. Retained evidence: `/Users/pawellurka/MEGADev/s01e04/repo/.limen/integration-proof/combined-checks.txt`; reusable probe: `check-integration.ts` beside that log, run from `.limen/check-integration.ts` in the integration checkout.
+
+The coordinator read the complete source and test diffs. No further independent review is needed for this local, reversible change after the shared reader's independent review and the passing native and render checks. No service, browser, preview, hosting, or Git push was part of integration proof. The remaining gate is owner approval before this combined candidate lands.
