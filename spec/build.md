@@ -11,18 +11,19 @@ Status marks are prose only: 🟠 ACTIVE · 🔴 PLANNED · 🟢 PROVEN · ⚪ D
 - **Morning digest (approved split, 2026-10-29):** implement issues #1–#5 with one worker each, section 1 first and sections 2a–2d in parallel after shared types reach main; sections 3–4, previews, public hosting, and plan archival stay with the owner.
 - **Standing models (owner, 2026-10-29), all via OpenRouter, always passed explicitly:** coordinator and workers `--engine pi --provider openrouter --model openai/gpt-6.1-sol --thinking high`; reviewer `--engine pi --provider openrouter --model anthropic/claude-opus-5.5 --thinking high`; Picture `--engine pi --provider openrouter --model openai/gpt-6.1-sol --thinking medium`; scout `--engine pi --provider openrouter --model anthropic/claude-haiku-5.5 --thinking medium`. Never the package default model.
 
-- **Execution:** pass `--prepare "pnpm install"` on every `limen spawn`; review section 1 on the reviewer route; obtain owner approval before any landing.
+- **Execution and HTTP contract:** pass `--prepare "pnpm install"` on every `limen spawn`; review section 1 on the reviewer route; obtain owner approval before any landing; JSON serializes the shared `NightDigest` result, and both digest routes return 404 for missing nights and 400 for invalid night arguments.
 
 ## NOW
 
 <!-- Generated from spec/features/active/ by limen land, limen ticket done and limen board --write. Edit the tickets, not these lines. -->
 
+- `F005-test-digest-routes` (🟠 ACTIVE): Test digest routes
+- `F004-link-nights-from-the-board` (🟠 ACTIVE): Link nights from the board
+- `F003-serve-the-digest-as-json` (🟠 ACTIVE): Serve the digest as JSON
+- `F002-render-the-digest-page` (🟠 ACTIVE): Render the digest page
+
 ## NEXT
 
-- `F002-render-the-digest-page` (PLANNED): HTML digest starts after shared reader types reach main.
-- `F003-serve-the-digest-as-json` (PLANNED): JSON digest starts after shared reader types reach main; comparison needs the HTML route.
-- `F004-link-nights-from-the-board` (PLANNED): night links and counts start after shared reader types reach main; destination checks need the HTML route.
-- `F005-test-digest-routes` (PLANNED): route tests start after shared reader types reach main; final proof needs HTML and JSON routes.
 
 ## PROVEN
 
