@@ -9,7 +9,7 @@ Status marks are prose only: 🟠 ACTIVE · 🔴 PLANNED · 🟢 PROVEN · ⚪ D
 ## TRACK
 
 - **Morning digest (plan.md, 2026-10-29):** split plan.md into GitHub issues with the plan-to-issues skill after the owner approves the split; one worker per issue; previews and public hosting stay with the owner.
-- **Standing models (owner, 2026-10-29), all via OpenRouter, always passed explicitly:** coordinator and workers `--engine pi --provider openrouter --model openai/gpt-6.1-sol --thinking high`; reviewer `--engine pi --provider openrouter --model anthropic/claude-opus-5.5 --thinking high`; scout and Picture `--engine pi --provider openrouter --model anthropic/claude-haiku-5.5 --thinking medium`. Never the package default model.
+- **Standing models (owner, 2026-10-29), all via OpenRouter, always passed explicitly:** coordinator and workers `--engine pi --provider openrouter --model openai/gpt-6.1-sol --thinking high`; reviewer `--engine pi --provider openrouter --model anthropic/claude-opus-5.5 --thinking high`; Picture `--engine pi --provider openrouter --model openai/gpt-6.1-sol --thinking medium`; scout `--engine pi --provider openrouter --model anthropic/claude-haiku-5.5 --thinking medium`. Never the package default model.
 
 ## NOW
 
