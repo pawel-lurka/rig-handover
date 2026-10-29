@@ -8,7 +8,7 @@ Status marks are prose only: 🟠 ACTIVE · 🔴 PLANNED · 🟢 PROVEN · ⚪ D
 
 ## TRACK
 
-- **Morning digest (approved split, 2026-10-29):** implement issues #1–#5 with one worker each, section 1 first and sections 2a–2d in parallel after shared types reach main; sections 3–4, previews, public hosting, and plan archival stay with the owner.
+- **Morning digest (code landed locally, 2026-10-29):** issues #1–#5 are closed after owner-approved landings; sections 3–4, previews, public hosting, and plan archival stay with the owner; no Git push is authorized.
 - **Standing models (owner, 2026-10-29), all via OpenRouter, always passed explicitly:** coordinator and workers `--engine pi --provider openrouter --model openai/gpt-6.1-sol --thinking high`; reviewer `--engine pi --provider openrouter --model anthropic/claude-opus-5.5 --thinking high`; Picture `--engine pi --provider openrouter --model openai/gpt-6.1-sol --thinking medium`; scout `--engine pi --provider openrouter --model anthropic/claude-haiku-5.5 --thinking medium`. Never the package default model.
 
 - **Execution and HTTP contract:** pass `--prepare "pnpm install"` on every `limen spawn`; review section 1 on the reviewer route; obtain owner approval before any landing; JSON serializes the shared `NightDigest` result, and both digest routes return 404 for missing nights and 400 for invalid night arguments.

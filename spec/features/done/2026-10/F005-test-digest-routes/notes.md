@@ -1,6 +1,6 @@
 # Integration proof
 
-Coordinator-owned integration worktree: `/Users/pawellurka/MEGADev/s01e04/repo/.limen/integration/morning-digest`, branch `integration/morning-digest`. It combines all four completed section 2 candidates without changing main. Remove this worktree after all four section 2 features are terminal and none of their jobs runs.
+Integration used `/Users/pawellurka/MEGADev/s01e04/repo/.limen/integration/morning-digest`, branch `integration/morning-digest`, to combine the four section 2 candidates without changing main before owner approval. The worktree and branch are removed after landing; no job remains running.
 
 The page and JSON branches both added the same reader import to `src/app.tsx`. The integration removes that duplicate and leaves both route implementations unchanged. Route assertions remain unskipped and unchanged; dependency failures are settled by running them against the real combined routes, not by weakening the tests.
 
@@ -8,4 +8,4 @@ At code commit `c11dfbc48fd63d30fa78a2ccda79af1840528cae`, `pnpm test` passed al
 
 These checks resolve every open dependency check left by the page, JSON, board, and route-test workers. No mock or skip conceals the missing-route failures observed in their isolated branches. Retained evidence: `/Users/pawellurka/MEGADev/s01e04/repo/.limen/integration-proof/combined-checks.txt`; reusable probe: `check-integration.ts` beside that log, run from `.limen/check-integration.ts` in the integration checkout.
 
-The coordinator read the complete source and test diffs. No further independent review is needed for this local, reversible change after the shared reader's independent review and the passing native and render checks. No service, browser, preview, hosting, or Git push was part of integration proof. The remaining gate is owner approval before this combined candidate lands.
+The coordinator read the complete source and test diffs. No further independent review is needed for this local, reversible change after the shared reader's independent review and the passing native and render checks. No service, browser, preview, hosting, or Git push was part of integration proof. The owner approved combined candidate `29af6a2`; it landed on local main, and all four features closed in `aac5b98`. The final main validation in `.limen/integration-proof/main-checks.txt` passed all 40 tests, typecheck, and both fixture link/parity checks after the nested integration checkout was removed. The earlier 80-test main run discovered both copies of the suite; the final 40-test run is authoritative. All five GitHub issues are closed. Public review, hosting, and plan archival remain with the owner.
