@@ -17,8 +17,6 @@ Status marks are prose only: 🟠 ACTIVE · 🔴 PLANNED · 🟢 PROVEN · ⚪ D
 
 <!-- Generated from spec/features/active/ by limen land, limen ticket done and limen board --write. Edit the tickets, not these lines. -->
 
-- `F001-read-nightly-run-logs` (🟠 ACTIVE): Read nightly run logs
-
 ## NEXT
 
 - `F002-render-the-digest-page` (PLANNED): HTML digest starts after shared reader types reach main.
@@ -29,3 +27,6 @@ Status marks are prose only: 🟠 ACTIVE · 🔴 PLANNED · 🟢 PROVEN · ⚪ D
 ## PROVEN
 
 <!-- Generated from spec/features/done/ by limen land, limen ticket done and limen board --write. Edit the tickets, not these lines. -->
+
+- `F001-read-nightly-run-logs` (🟢 PROVEN): Read nightly run logs; landed 2026-10-29
+- 2026-10: 1 landed. spec/features/done/2026-10/

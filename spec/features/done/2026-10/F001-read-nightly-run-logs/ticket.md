@@ -2,6 +2,7 @@
 touches:
   - rig.logs
 opened: 2026-10-29
+landed: 2026-10-29
 ---
 
 # F001 · Read nightly run logs
