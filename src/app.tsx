@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { loadConfig, type RigConfig } from './config.js';
+import { readNight } from './digest/reader.js';
 import { lane } from './lane.js';
 import { readNight } from './digest/reader.js';
 import { readStatus } from './status.js';
@@ -11,6 +12,18 @@ export function createApp(config: RigConfig = loadConfig()) {
   const app = new Hono();
 
   app.get('/health', (c) => c.json({ ok: true, lane: lane().id }));
+
+  app.get('/api/digest/:night', (c) => {
+    try {
+      const digest = readNight(config.runsDir, c.req.param('night'));
+      return c.json(digest, digest.kind === 'missing' ? 404 : 200);
+    } catch (error) {
+      if (error instanceof RangeError) {
+        return c.json({ error: error.message }, 400);
+      }
+      throw error;
+    }
+  });
 
   app.get('/', (c) =>
     c.html(
