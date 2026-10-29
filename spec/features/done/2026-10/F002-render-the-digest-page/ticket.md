@@ -3,6 +3,7 @@ touches:
   - rig.runtime
   - rig.views
 opened: 2026-10-29
+landed: 2026-10-29
 ---
 
 # F002 · Render the digest page

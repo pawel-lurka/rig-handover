@@ -2,6 +2,7 @@
 touches:
   - rig.runtime
 opened: 2026-10-29
+landed: 2026-10-29
 ---
 
 # F003 · Serve the digest as JSON

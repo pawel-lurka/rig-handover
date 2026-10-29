@@ -3,6 +3,7 @@ touches:
   - rig.status
   - rig.views
 opened: 2026-10-29
+landed: 2026-10-29
 ---
 
 # F004 · Link nights from the board

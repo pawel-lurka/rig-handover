@@ -17,11 +17,6 @@ Status marks are prose only: 🟠 ACTIVE · 🔴 PLANNED · 🟢 PROVEN · ⚪ D
 
 <!-- Generated from spec/features/active/ by limen land, limen ticket done and limen board --write. Edit the tickets, not these lines. -->
 
-- `F005-test-digest-routes` (🟠 ACTIVE): Test digest routes
-- `F004-link-nights-from-the-board` (🟠 ACTIVE): Link nights from the board
-- `F003-serve-the-digest-as-json` (🟠 ACTIVE): Serve the digest as JSON
-- `F002-render-the-digest-page` (🟠 ACTIVE): Render the digest page
-
 ## NEXT
 
 
@@ -29,5 +24,9 @@ Status marks are prose only: 🟠 ACTIVE · 🔴 PLANNED · 🟢 PROVEN · ⚪ D
 
 <!-- Generated from spec/features/done/ by limen land, limen ticket done and limen board --write. Edit the tickets, not these lines. -->
 
+- `F005-test-digest-routes` (🟢 PROVEN): Test digest routes; landed 2026-10-29
+- `F004-link-nights-from-the-board` (🟢 PROVEN): Link nights from the board; landed 2026-10-29
+- `F003-serve-the-digest-as-json` (🟢 PROVEN): Serve the digest as JSON; landed 2026-10-29
+- `F002-render-the-digest-page` (🟢 PROVEN): Render the digest page; landed 2026-10-29
 - `F001-read-nightly-run-logs` (🟢 PROVEN): Read nightly run logs; landed 2026-10-29
-- 2026-10: 1 landed. spec/features/done/2026-10/
+- 2026-10: 5 landed. spec/features/done/2026-10/
